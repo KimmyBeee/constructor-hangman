@@ -1,7 +1,7 @@
 console.log("word is loaded");
 
 
-var ChosenWord = function(word)	{
+var WordInPlay = function(word)	{
 
 	this.word = word;
 	this.letters =[];
@@ -20,7 +20,7 @@ var ChosenWord = function(word)	{
 	};
 };
 
-module.exports = ChosenWord;
+module.exports = WordInPlay;
 
-var testWord = new ChosenWord("constructor");
+var testWord = new WordInPlay("constructor");
 testWord.makeWordArray();

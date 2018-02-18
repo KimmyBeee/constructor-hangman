@@ -9,7 +9,3 @@ module.exports = WordInPlay;
  
 
 	
-//constructor function for creating wordInPlay object
-//...break the word into individual letters
-//...hide each letter with an underscore
-//assign function generateWord using prototype
