@@ -1,18 +1,26 @@
+console.log("word is loaded");
 
 
-// var Word = function(current, hidden)	{
+var ChosenWord = function(word)	{
 
-// }
+	this.word = word;
+	this.letters =[];
+	this.hidAndGuessed = [];
 
-//assign function generateWord using prototype
-Word.prototype.generateWord = function()	{
-	var wordBank = ["prototype", "javascript", "variable", "object", "element", "constructor"];
-	var chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-	console.log(chosenWord);
-	chosenWord.split("");
-	console.log(chosenWord)
+	this.makeWordArray = function()	{
+		this.letters = word.split("");
+		this.letterCount = this.letters.length;
 
-}
+		console.log(this.letters);
+	
+		for (var i = 0; i < this.letterCount; i++) {
+			this.hidAndGuessed.push(" __ ");	
+		};
+		console.log(this.hidAndGuessed);
+	};
+};
 
-var test = new UserSearch("Kimmy", "Aurora, MN");
-test.getWeather();
+module.exports = ChosenWord;
+
+var testWord = new ChosenWord("constructor");
+testWord.makeWordArray();
