@@ -14,9 +14,12 @@ var WordInPlay = function(word)	{
 		console.log(this.letters);
 	
 		for (var i = 0; i < this.letterCount; i++) {
-			this.hidAndGuessed.push(" __ ");	
+			this.hidAndGuessed.push(" __ ");
+			var shownWord = this.hidAndGuessed.join(" ");	
 		};
-		console.log(this.hidAndGuessed);
+		console.log(shownWord);
+		//put this here or in game.js
+		//console.log("You're word is:" + "\n" + shownWord)
 	};
 };
 
@@ -24,3 +27,8 @@ module.exports = WordInPlay;
 
 var testWord = new WordInPlay("constructor");
 testWord.makeWordArray();
+
+
+//goes in game.js var ??? = new WordInPLay(chosenWord);
+//???.makeWordArray
+//console.log("You're word is:" + "\n" + shownWord)
