@@ -7,15 +7,31 @@ var CheckedLetterWord = function(letter)	{
 	this.correctLetterGuess === false;
 	var displayWord = new WordInPlay("constructor");
 	var updatedWord = "";
-
+	var usedLetters = [];
+	
 	// console.log(displayWord);
 	// console.log(displayWord.letters);
+	this.checkLetter = function()	{
+		for (var k =0; k < this.usedLetters.length; k++)	{
+			console.log("after for");
+			if (this.usedLetters[k] === letter)	{
+				
+				console.log("Hey, you already guessed that letter!");
+				console.log(this.usedLetters);
+				//call function asking for userGuess input
+			} else	{
+				this.showLetter();
+			};
+		};
+	};
 	
 	this.showLetter = function()	{
 		
 		for ( var l = 0; l < displayWord.hidAndGuessed.length; l++)	{
 		
 			if (displayWord.letters[l] === letter) 	{
+				updateArray = usedLetters.push(letter);
+				console.log(usedLetters);
 				this.correctLetterGuess = true;
 				};
 
@@ -36,7 +52,7 @@ var CheckedLetterWord = function(letter)	{
 
 module.exports = CheckedLetterWord;
 
-var testDisplay = new CheckedLetterWord("t");
+var testDisplay = new CheckedLetterWord("z");
 testDisplay.showLetter();
 
 //need to be followed with...
