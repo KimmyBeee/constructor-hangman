@@ -8,7 +8,7 @@ console.log(chosenWord);
 
 var userGuess = "";
 var usedLetters = [];
-var guessesLeft = 15;
+var guessesLeft = 12;
 var badGuesses = [];
 
 var correctLetterGuess = false;
